@@ -7,3 +7,5 @@ I originally discovered project euler when I was a junior in high school. I was 
 All of my posted solutions are correct (the website allows you to check your answer) and I have never cheated or received help on the problems, although there are certainly a plethora of solutions on the internet for those who struggle with them. I am currently in the process of resolving the problems that I had previously done in VB as I don't think the VB solutions are worth sharing (yay highschool code!) so that explains some of the gaps.
 
 All solutions can be compiled with gcc/g++ and some require the -lm flag for the math library. Some solutions also have a corresponding ".in" file that should be piped into the executable when run. All input is read from stdin and the output is a single line to stdout.
+
+<img src="http://projecteuler.net/profile/ddara.png" alt="Project Euler Stats">
