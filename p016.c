@@ -4,7 +4,8 @@
 // ceiling(1000 * log10(2)) == 302
 int finalNumber[302];
 
-int main() {
+int main()
+{
 	memset(finalNumber, 0, sizeof(int) * 302);
 
 	finalNumber[301] = 2;
@@ -12,12 +13,14 @@ int main() {
 	int i, col, prodCol, carry;
 
 	// Loop up to given power
-	for (i = 1; i < 1000; i++) {
+	for (i = 1; i < 1000; i++)
+	{
 		carry = 0;
 
 		// Multiply number in finalNumber by 2
 		// (Loop through columns multiplying digits by 2)
-		for (col = 301; col >= 0; col--) {
+		for (col = 301; col >= 0; col--)
+		{
 			// Inherit any previous carry value
 			prodCol = carry;
 
@@ -35,11 +38,12 @@ int main() {
 	int sum = 0;
 
 	// sum the digits of the final number
-	for (i = 0; i < 302; i++) {
+	for (i = 0; i < 302; i++)
+	{
 		sum += finalNumber[i];
 	}
 
-	printf("%d\n", sum);	
+	printf("%d\n", sum);
 
 	return 0;
 }

@@ -15,49 +15,65 @@ int teens[] = {L("eleven"), L("twelve"), L("thirteen"),
 int hundred = L("hundred");
 int thousand = L("thousand");
 
-int letterCount(int num) {
+inline int letterCount(int num)
+{
 	int count = 0;
 
-	if (num % 100 == 0) {
-		if (num == 0) {
+	if (num % 100 == 0)
+	{
+		if (num == 0)
+		{
 			count = ones[0];
 		}
-	} else if (num % 100 <= 10) {
+	}
+	else if (num % 100 <= 10)
+	{
 		// count ones
 		count += ones[num % 100];
 		printf("ones: %d\n", num % 100);
-	} else if (num % 100 < 20) {
+	}
+	else if (num % 100 < 20)
+	{
 		// count teens
 		count += teens[num % 100 - 11];
-	} else {
+	}
+	else
+	{
 		// tens
 		count += tens[(num % 100) / 10 - 1];
 
 		// -ones
-		if (num % 10 != 0) {
+		if (num % 10 != 0)
+		{
 			count += ones[num % 10];
 		}
 	}
 
-	if ((num % 1000) / 100 != 0) {
+	if ((num % 1000) / 100 != 0)
+	{
 		// count hundreds
 		count += ones[num / 100] + hundred;
 
-		if (num % 100 > 0) {
+		if (num % 100 > 0)
+		{
 			count += L("and");
 		}
 	}
 
 	if (num == 1000)
+	{
 		count = ones[1] + thousand;
+	}
 
 	return count;
 }
 
-int main() {
+int main()
+{
 	int totalLetters = 0, i;
 
-	for (i = 1; i <= 1000; i++) {
+	for (i = 1; i <= 1000; i++)
+	{
 		totalLetters += letterCount(i);
 		printf("number: %d count: %d\n", i, letterCount(i));
 	}

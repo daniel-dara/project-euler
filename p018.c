@@ -1,9 +1,7 @@
-/*
-	This is a linear time solution in respect to the amount of data
-	in the triangle and it uses only N memory where N is the number
-	of rows in the triangle.
-*/
-
+/* This is a linear time solution in respect to the amount of data
+   in the triangle and it uses only N memory where N is the number
+   of rows in the triangle. */
+   
 #define N 15
 
 #include <stdio.h>
@@ -11,25 +9,29 @@
 
 int curRow[N];
 
-static inline int MAX(int a, int b) {
+inline int MAX(int a, int b)
+{
 	return a > b ? a : b;
 }
 
-int main() {
+int main()
+{
 	// Clear row
 	memset(curRow, 0, N * sizeof(int));
 
 	int i, row = 0, num, maxPath = 0;
 	int leftParent, rightParent, maxParent = 0;
 
-	while (row++ < N) {
+	while (row++ < N)
+	{
 		// Reset the column counter
 		i = 0;
 
 		// Reset leftParent since there is none for the first column of the row
 		leftParent = 0;
 
-		while (i < row) {
+		while (i < row)
+		{
 			scanf("%d", &num);
 
 			// Get the max between the left and right parent

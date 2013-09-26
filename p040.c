@@ -2,10 +2,12 @@
 #include <math.h>
 
 // returns the nth least significant digit from 'num'
-inline int getDigit(int num, int n) {
+inline int getDigit(int num, int n)
+{
 	int i = 0;
 
-	while (i++ < n) {
+	while (i++ < n)
+	{
 		num /= 10;
 	}
 
@@ -13,15 +15,18 @@ inline int getDigit(int num, int n) {
 }
 
 // returns the total number of digits in 'num'
-inline int digitCount(int num) {
+inline int digitCount(int num)
+{
 	return log10(num) + 1;
 }
 
 // returns the nth digit in Champernowne's constant
-int nthDigit(int n) {
+int nthDigit(int n)
+{
 	int i = 1, digits = 1;
 
-	while (digits < n) {
+	while (digits < n)
+	{
 		i++;
 		digits += digitCount(i);
 	}
@@ -29,10 +34,12 @@ int nthDigit(int n) {
 	return getDigit(i, (digits - n));
 }
 
-int main() {
+int main()
+{
 	int i = 1, product = 1;
 
-	for (i = 1; i < 1000000; i *= 10) {
+	for (i = 1; i < 1000000; i *= 10)
+	{
 		product *= nthDigit(i);
 	}
 

@@ -7,24 +7,29 @@
 	That method only works as long as k is relatively small and not
 	proportional to n. */
 
-int char_to_int(char c) {
+inline int char_to_int(char c)
+{
 	return c - '0';
 }
 
-int main() {
-	FILE* input = fopen("p008.in", "r");
-	char c;
+int main()
+{
 	int i, maxProduct = 0, product = 1;
-	char digits[] = {0, 0, 0, 0, 0}, deadDigit;
+	char digits[] = {0, 0, 0, 0, 0}, deadDigit, c;
+	FILE* input = fopen("p008.in", "r");
 
-	while (fscanf(input, "%c", &c) != -1) {
-		if (c != '\n') {
+	while (fscanf(input, "%c", &c) != -1)
+	{
+		if (c != '\n')
+		{
 			// Save the digit being erased
 			deadDigit = digits[0];
 
 			// Shift digits left
 			for (i = 0; i < 4; i++)
+			{
 				digits[i] = digits[i + 1];
+			}
 
 			// Store most recent digit
 			digits[4] = c;
@@ -33,22 +38,32 @@ int main() {
 			product *= char_to_int(c);
 
 			// Check that we've read 5 numbers
-			if (digits[0] != 0) {
+			if (digits[0] != 0)
+			{
 				// Check that we really have a 6th number to divide out
-				if (deadDigit != 0) {
+				if (deadDigit != 0)
+				{
 					// Take the digit erased out of the product
 					if (deadDigit == '0')
+					{
 						// Rather than divide by 0, we must recompute the product
 						for (product = 1, i = 0; i < 5; i++)
+						{
 							product *= char_to_int(digits[i]);
+						}
+					}
 					else
+					{
 						// otherwise we can safely divide out the number
 						product /= char_to_int(deadDigit);
+					}
 				}
 
 				// Check product against max
 				if (product > maxProduct)
+				{
 					maxProduct = product;
+				}
 			}
 		}
 	}

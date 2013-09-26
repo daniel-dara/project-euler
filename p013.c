@@ -5,15 +5,17 @@
 int sum[52];
 int numbers[100][50];
 
-int main() {
+int main()
+{
 	int i = 0;
 	char c;
-
 	FILE* input = fopen("p013.in", "r");
 
 	// read in the numbers
-	while (fscanf(input, "%c", &c) != EOF) {
-		if (c != '\n') {
+	while (fscanf(input, "%c", &c) != EOF)
+	{
+		if (c != '\n')
+		{
 			numbers[i / 50][i % 50] = c - '0';
 			i++;
 		}
@@ -23,12 +25,17 @@ int main() {
 
 	// loop from right to left summing columns until we pass the
 	// 50th digit and don't have any carry
-	while (col >= 0 || carry) {
+	while (col >= 0 || carry)
+	{
 		sumCol = carry; // initialize to carry from the last sum
 
 		if (col >= 0)
+		{
 			for (i = 0; i < 100; i++)
+			{
 				sumCol += numbers[i][col]; // sum a column
+			}
+		}
 
 		// put the last digit of the column's sum into the total sum
 		sum[col + 2] = sumCol % 10;
@@ -41,7 +48,9 @@ int main() {
 
 	// only print the first 10 digits as per the question
 	for (i = 0; i < 10; i++)
+	{
 		printf("%d", sum[i]);
+	}
 
 	printf("\n");
 
