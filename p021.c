@@ -28,4 +28,6 @@ int main()
 	}
 
 	printf("%d\n", amicableSum);
+
+	return 0;
 }

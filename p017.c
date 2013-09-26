@@ -30,7 +30,6 @@ inline int letterCount(int num)
 	{
 		// count ones
 		count += ones[num % 100];
-		printf("ones: %d\n", num % 100);
 	}
 	else if (num % 100 < 20)
 	{
@@ -42,7 +41,7 @@ inline int letterCount(int num)
 		// tens
 		count += tens[(num % 100) / 10 - 1];
 
-		// -ones
+		// ones
 		if (num % 10 != 0)
 		{
 			count += ones[num % 10];
@@ -75,7 +74,6 @@ int main()
 	for (i = 1; i <= 1000; i++)
 	{
 		totalLetters += letterCount(i);
-		printf("number: %d count: %d\n", i, letterCount(i));
 	}
 
 	printf("%d\n", totalLetters);

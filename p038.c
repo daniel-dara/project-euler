@@ -27,7 +27,7 @@ inline int isPan(int num)
 
 int main()
 {	
-	int i, maxPan = 0, digitTotal = 0, Num, N;
+	int i, maxPan = 0;
 
 	/*
 	   brute force, loop through all possible integers
@@ -71,4 +71,6 @@ int main()
 	}
 
 	printf("%d\n", maxPan);
+
+	return 0;
 }

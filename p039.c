@@ -3,7 +3,7 @@
 
 inline int solutions(int p)
 {
-	int a, b, c, total = 0;
+	int a, b, total = 0;
 
 	// brute force search over a and b
 	for (a = 1; a < p; a++)

@@ -20,7 +20,7 @@ int main()
 	memset(curRow, 0, N * sizeof(int));
 
 	int i, row = 0, num, maxPath = 0;
-	int leftParent, rightParent, maxParent = 0;
+	int leftParent, maxParent = 0;
 
 	while (row++ < N)
 	{
