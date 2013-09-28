@@ -11,7 +11,7 @@ inline int char_sum(string str)
 {
 	int sum = 0;
 
-	for (int i = 0; i < str.length(); i++)
+	for (unsigned int i = 0; i < str.length(); i++)
 	{
 		sum += str[i] - 'A' + 1;
 	}
@@ -38,7 +38,7 @@ int main()
 	int total = 0;
 
 	// compute and sum their values
-	for (int i = 0; i < names.size(); i++)
+	for (unsigned int i = 0; i < names.size(); i++)
 	{
 		total += (i + 1) * char_sum(names[i]);
 	}
