@@ -29,7 +29,7 @@ int main()
 	while (!input.eof())
 	{
 		string name;
-		std::getline(input, name, ',');
+		getline(input, name, ',');
 		names.push_back(name.substr(1, name.length() - 2));
 	}
 
