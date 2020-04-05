@@ -30,3 +30,9 @@ class PrimeSieveTest(unittest.TestCase):
                             43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
         self.assertEqual(primes_under_100, list(PrimeSieve(100)))
+
+    def test_no_limit_first_8_primes(self):
+        prime_sieve = PrimeSieve()
+        primes = [next(prime_sieve) for _ in range(8)]
+
+        self.assertEqual([2, 3, 5, 7, 11, 13, 17, 19], primes)

@@ -3,7 +3,7 @@ import math
 
 class PrimeSieve(object):
     def __init__(self, max_number: int = None):
-        if max_number < 2:
+        if max_number is not None and max_number < 2:
             raise ValueError('max_number must be greater than or equal to 2.')
 
         self.primes = [2]
