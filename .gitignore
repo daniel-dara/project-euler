@@ -1,4 +1,5 @@
 *.out
 /old
 /review
-.idea
+.idea/
+__pycache__/

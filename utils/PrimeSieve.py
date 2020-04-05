@@ -1,7 +1,7 @@
 import math
 
 
-class PrimeGenerator(object):
+class PrimeSieve(object):
     def __init__(self, max_number: int = None):
         if max_number < 2:
             raise ValueError('max_number must be greater than or equal to 2.')
@@ -15,9 +15,9 @@ class PrimeGenerator(object):
     def __iter__(self):
         return self
 
-    def __next__(self):
-        # The first prime (2) is special cased so that the loop to find subsequent primes can increment by 2.
-        # Incrementing by 2 skips even numbers for a slight optimization.
+    def __next__(self) -> int:
+        # Optimization: The first prime (2) is special cased so that the loop for finding primes can start at 3 and
+        # increment by 2 (as opposed to a slower, conventional loop incrementing by 1).
         if self.current_number == 2:
             self.last_prime = 2
             self.current_number = 3
@@ -35,14 +35,15 @@ class PrimeGenerator(object):
 
         return self.last_prime
 
-    def __has_found_next_prime(self):
+    def __has_found_next_prime(self) -> bool:
         return self.last_prime != self.primes[-1]
 
-    def __has_reached_max(self):
+    def __has_reached_max(self) -> bool:
         return self.max_number is not None and self.current_number > self.max_number
 
-    def __is_prime(self, number: int):
-        root = math.sqrt(number)
+    def __is_prime(self, number: int) -> bool:
+        # Optimization: Convert root to an integer for faster comparisons against 'prime'.
+        root = math.ceil(math.sqrt(number))
 
         for prime in self.primes:
             if prime > root:
