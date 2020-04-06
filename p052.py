@@ -1,7 +1,6 @@
 from itertools import count
 
 
-# brute force
 def solve_problem_052(max_multiplier: int) -> int:
     # iterate to infinity
     for number in count(1):
