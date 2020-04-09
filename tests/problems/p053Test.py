@@ -1,6 +1,6 @@
 import unittest
 from unittest_data_provider import data_provider
-from p053 import solve_problem_053
+from problems.p053 import solve_problem_053
 
 
 class Problem053Test(unittest.TestCase):

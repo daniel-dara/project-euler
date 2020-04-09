@@ -1,6 +1,6 @@
 import unittest
 from unittest_data_provider import data_provider
-from p055 import solve_problem_055, is_lychrel
+from problems.p055 import solve_problem_055, is_lychrel
 
 
 class Problem055Test(unittest.TestCase):
