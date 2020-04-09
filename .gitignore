@@ -3,3 +3,4 @@
 /review
 .idea/
 __pycache__/
+*.sublime*
