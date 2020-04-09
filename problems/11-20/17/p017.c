@@ -15,7 +15,7 @@ int teens[] = {L("eleven"), L("twelve"), L("thirteen"),
 int hundred = L("hundred");
 int thousand = L("thousand");
 
-inline int letterCount(int num)
+int letterCount(int num)
 {
 	int count = 0;
 

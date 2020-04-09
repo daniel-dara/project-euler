@@ -1,7 +1,7 @@
 /* This is a linear time solution in respect to the amount of data
    in the triangle and it uses only N memory where N is the number
    of rows in the triangle. */
-   
+
 #define N 15
 
 #include <stdio.h>
@@ -9,7 +9,7 @@
 
 int curRow[N];
 
-inline int MAX(int a, int b)
+int MAX(int a, int b)
 {
 	return a > b ? a : b;
 }

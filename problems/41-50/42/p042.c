@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-inline int eval(char* str)
+int eval(char* str)
 {
 	int sum = 0, i = 0;
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-inline int countChain(long long int num)
+int countChain(long long int num)
 {
 	int length = 0;
 

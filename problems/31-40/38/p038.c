@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-inline int isPan(int num)
+int isPan(int num)
 {
 	// if num is greater than the greatest pandigital return false
 	if (num > 987654321)
 	{
 		return 0;
 	}
-	
+
 	int digits = 0;
 
 	/* Use bits to represent which digits we've seen
@@ -26,7 +26,7 @@ inline int isPan(int num)
 }
 
 int main()
-{	
+{
 	int i, maxPan = 0;
 
 	/*

@@ -18,7 +18,7 @@ int table[11][1000]; // [quotient][remainder]
 /* given an integer divisor, this function finds the length
    of the cycle in the fraction (1 / divisor). It returns 0 if
    there is no cycle. */
-inline int cycleLength(int divisor)
+int cycleLength(int divisor)
 {
 	int dividend = 1, quotient, remainder, index = 1;
 

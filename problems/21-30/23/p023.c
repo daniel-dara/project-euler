@@ -6,7 +6,7 @@
 // array to hold abundant numbers
 int abundantSums[28124];
 
-inline int isAbundant(int num)
+int isAbundant(int num)
 {
 	int i, sum = 1;
 	double root = sqrt(num);

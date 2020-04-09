@@ -7,7 +7,7 @@
 using namespace std;
 
 // sum up the character values in str
-inline int char_sum(string str)
+int char_sum(string str)
 {
 	int sum = 0;
 

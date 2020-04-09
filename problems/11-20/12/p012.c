@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-inline int divisors(int num)
+int divisors(int num)
 {
 	int i, total = 0;
 	double root = sqrt(num); // save time re-calculating in loop

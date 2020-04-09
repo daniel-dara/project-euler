@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-inline int solutions(int p)
+int solutions(int p)
 {
 	int a, b, total = 0;
 

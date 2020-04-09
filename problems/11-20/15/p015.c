@@ -3,7 +3,7 @@
 
 long long int grid[21][21];
 
-inline long long int routes(int i, int j)
+long long int routes(int i, int j)
 {
 	// return if out of bounds
 	if (i < 0 || j < 0)

@@ -2,7 +2,7 @@
 
 int primes[10001], count = 0;
 
-inline int isPrime(int num)
+int isPrime(int num)
 {
 	int isPrime = 1, i = 0;
 
@@ -18,7 +18,7 @@ inline int isPrime(int num)
 
 int main()
 {
-	int num = 2;	
+	int num = 2;
 
 	// Loop until 10,001 primes have been calculated
 	while (count < 10001)
@@ -27,7 +27,7 @@ int main()
 		{
 			primes[count++] = num;
 		}
-		
+
 		num++;
 	}
 

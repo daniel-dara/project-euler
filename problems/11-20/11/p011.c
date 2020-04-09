@@ -5,17 +5,17 @@
 
 int grid[GRID_HEIGHT][GRID_WIDTH];
 
-inline int MAX(int a, int b)
+int MAX(int a, int b)
 {
 	return (a > b ? a : b);
 }
 
-inline int MAX4(int a, int b, int c, int d)
+int MAX4(int a, int b, int c, int d)
 {
 	return MAX(a, MAX(b, MAX(c, d)));
 }
 
-inline int calcProd(int i, int j, int* iOffsets, int* jOffsets)
+int calcProd(int i, int j, int* iOffsets, int* jOffsets)
 {
 	int product = 1, k;
 
@@ -50,14 +50,14 @@ int main()
 	int Offset[] = {0, 1, 2, 3};
 	int revOffset[] = {3, 2, 1, 0};
 
-	// loop through grid	
+	// loop through grid
 	for (i = 0; i < GRID_HEIGHT; i++)
 	{
 		for (j = 0; j < GRID_WIDTH; j++)
 		{
 				maxProd = MAX4(calcProd(i, j, Offset, Offset),
 				               calcProd(i, j, Offset, noOffset),
-				               calcProd(i, j, Offset, revOffset), 
+				               calcProd(i, j, Offset, revOffset),
 				               maxProd);
 		}
 	}

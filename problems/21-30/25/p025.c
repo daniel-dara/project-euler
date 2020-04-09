@@ -4,7 +4,7 @@
 #include <string.h>
 
 // calculates the sum of 'a' and 'b' and stores result in 'b'
-inline void sum(int* a, int* b)
+void sum(int* a, int* b)
 {
 	int i = SIZE, sum, carry = 0;
 

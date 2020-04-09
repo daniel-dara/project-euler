@@ -2,7 +2,7 @@
 #include <math.h>
 
 // returns the nth least significant digit from 'num'
-inline int getDigit(int num, int n)
+int getDigit(int num, int n)
 {
 	int i = 0;
 
@@ -15,7 +15,7 @@ inline int getDigit(int num, int n)
 }
 
 // returns the total number of digits in 'num'
-inline int digitCount(int num)
+int digitCount(int num)
 {
 	return log10(num) + 1;
 }

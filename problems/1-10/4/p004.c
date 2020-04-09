@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // return 1 if num is a palindrome, 0 if not
-inline int isPal(int num)
+int isPal(int num)
 {
 	int revNum = 0, temp = num;
 

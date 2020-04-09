@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-inline void multiply(int *product, int multiplier)
+void multiply(int *product, int multiplier)
 {
 	int carry = 0, index = 199, digitProduct;
 
