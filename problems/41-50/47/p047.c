@@ -6,11 +6,11 @@ int i = 2;
 int primes[1000000] = {0};
 int prime_index = 0;
 
-int isInt(float num) {
+int isInt(double num) {
 	return num == (int) num;
 }
 
-int isPrime(num)
+int isPrime(int num)
 {
 	for (int i = 0; i < prime_index; i++)
 	{
@@ -21,11 +21,11 @@ int isPrime(num)
 	}
 
 	primes[prime_index++] = num;
-	return 1;	
+	return 1;
 }
 
 
-int hasDistinctPrimeFactors(num)
+int hasDistinctPrimeFactors(int num)
 {
 	int factors = 0;
 
