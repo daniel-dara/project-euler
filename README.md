@@ -9,7 +9,7 @@ I discovered Project Euler as a junior in high school when I still mostly progra
 
 # My Solutions
 * Problems 1 - 44 are written in C or C++.
-* Problems 46 - 49 are written in Python using my old, personal style.
+* Problems 46 - 48 are written in Python using my old, personal style.
 * Problems 50 - 55 are written in Python following PEP8 standards and have basic test cases. 
 
 The `problems` directory structure is not very Python-friendly since leading numbers are not allowed in keywords. I chose readable folder names over valid package names since the goal is to make it easier to read and navigate the code.
