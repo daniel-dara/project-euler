@@ -1,1 +1,2 @@
 unittest-data-provider
+more-itertools
