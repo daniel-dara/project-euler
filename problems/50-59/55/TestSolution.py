@@ -5,11 +5,8 @@ from .lychrel_numbers import solve, is_lychrel
 
 
 class TestSolution(TestCase):
-    @data_provider(lambda: (
-        (249,),
-    ))
-    def test_solve(self, expected: int):
-        self.assertEqual(expected, solve())
+    def test_solve(self):
+        self.assertEqual(249, solve())
 
     @data_provider(lambda: (
         (47, False),
