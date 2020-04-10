@@ -1,10 +1,11 @@
 from __future__ import annotations
+
 from collections import Counter
 from enum import Enum
 from typing import List, Tuple
 
 
-def solve_problem_054(file_name: str) -> int:
+def solve(file_name: str) -> int:
     player1_win_count = 0
 
     with open(file_name) as file:

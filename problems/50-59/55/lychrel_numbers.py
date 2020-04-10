@@ -1,6 +1,6 @@
 
 
-def solve_problem_055():
+def solve():
     return sum(is_lychrel(i) for i in range(10_000))
 
 

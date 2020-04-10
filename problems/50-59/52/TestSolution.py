@@ -6,8 +6,8 @@ from .permuted_multiples import solve
 
 class TestSolution(TestCase):
     @data_provider(lambda: (
-        (2, 125874),  # Example 1
-        (6, 142857),  # Problem
+        (2, 125874),
+        (6, 142857),
     ))
     def test_solve(self, multiplier: int, expected_smallest_int: int):
         self.assertEqual(expected_smallest_int, solve(multiplier))
