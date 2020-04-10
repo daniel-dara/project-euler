@@ -6,6 +6,7 @@ from typing import List, Tuple
 
 
 def solve(file_name: str) -> int:
+    """Count the number of Poker hands that player 1 wins from the given input file."""
     player1_win_count = 0
 
     with open(file_name) as file:

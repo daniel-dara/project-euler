@@ -1,6 +1,7 @@
 
 
-def solve():
+def solve() -> int:
+    """Count the number of Lychrel numbers below ten-thousand"""
     return sum(is_lychrel(i) for i in range(10_000))
 
 

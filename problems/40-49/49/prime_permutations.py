@@ -4,6 +4,7 @@ from utils.primesieve import PrimeSieve
 
 
 def solve() -> int:
+    """Find the 12-digit number formed by concatenating the three terms described in the problem statement."""
     given_sequence = (1487, 4817, 8147)
     sequences = find_all_sequences()
     sequences.remove(given_sequence)
@@ -12,6 +13,8 @@ def solve() -> int:
 
 
 def find_all_sequences() -> List[Tuple[int, int, int]]:
+    """Find all sequences of three numbers which are each equal distance apart, 4-digit primes, and permutations
+    of each other. """
     # Retrieve all 4 digit primes.
     primes = list(filter(lambda x: x > 999, PrimeSieve(9999)))
     sequences = []

@@ -2,6 +2,7 @@ from utils.primesieve import PrimeSieve
 
 
 def solve(max_number: int) -> int:
+    """Find the prime below the given max that can be written as the sum of the most consecutive primes."""
     prime_list = list(PrimeSieve(max_number))
     prime_set = set(prime_list)  # Minor optimization for constant time lookups.
 
