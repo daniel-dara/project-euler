@@ -10,5 +10,5 @@ class TestSolution(TestCase):
         (7, 56003),
         (8, 121313),
     ))
-    def test_solve(self, prime_family_count: int, expected_smallest_prime: int):
-        self.assertEqual(expected_smallest_prime, solve(prime_family_count))
+    def test_solve(self, prime_family_size: int, expected_smallest_prime: int):
+        self.assertEqual(expected_smallest_prime, solve(prime_family_size))
