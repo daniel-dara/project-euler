@@ -12,8 +12,5 @@ class TestSolution(TestCase):
     def test_binomial_coefficient(self, n: int, r: int, expected: int):
         self.assertEqual(expected, binomial_coefficient(n, r))
 
-    @data_provider(lambda: (
-        (4075,),
-    ))
-    def test_solve(self, expected: int):
-        self.assertEqual(expected, solve())
+    def test_solve(self):
+        self.assertEqual(4075, solve())
