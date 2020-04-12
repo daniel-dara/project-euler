@@ -22,11 +22,11 @@ class PrimeSieve:
             self.last_prime = 2
             self.current_number = 3
         else:
-            while not self.__has_found_next_prime():
-                if self.__has_reached_max():
+            while not self._has_found_next_prime():
+                if self._has_reached_max():
                     raise StopIteration
 
-                if self.__is_prime(self.current_number):
+                if self._is_prime(self.current_number):
                     self.primes.append(self.current_number)
 
                 self.current_number += 2
@@ -35,13 +35,13 @@ class PrimeSieve:
 
         return self.last_prime
 
-    def __has_found_next_prime(self) -> bool:
+    def _has_found_next_prime(self) -> bool:
         return self.last_prime != self.primes[-1]
 
-    def __has_reached_max(self) -> bool:
+    def _has_reached_max(self) -> bool:
         return self.max_number is not None and self.current_number > self.max_number
 
-    def __is_prime(self, number: int) -> bool:
+    def _is_prime(self, number: int) -> bool:
         # Optimization: Convert root to an integer for faster comparisons against 'prime'.
         root = math.ceil(math.sqrt(number))
 
