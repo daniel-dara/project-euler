@@ -5,12 +5,12 @@ from utils.primesieve import PrimeSieve
 
 prime_cache: List[int] = []
 prime_sieve = PrimeSieve()
-factors_cache = {0: set(), 1: set()}  # Cache is seeded to handle base cases.
+factors_cache = {1: set()}  # The cache is seeded to handle the base factorization case.
 
 
 def solve(x: int) -> int:
     """Find x consecutive integers that have x distinct prime factors each."""
-    return next(i for i in count() if all(len(distinct_prime_factors(j)) == x for j in range(i, i + x)))
+    return next(i for i in count(2) if all(len(distinct_prime_factors(j)) == x for j in range(i, i + x)))
 
 
 def distinct_prime_factors(number: int) -> Set[int]:
@@ -35,5 +35,6 @@ def prime_generator() -> Generator[int, None, None]:
     for prime in prime_cache:
         yield prime
 
-    prime_cache.append(next(prime_sieve))
-    yield prime_cache[-1]
+    while True:
+        prime_cache.append(next(prime_sieve))
+        yield prime_cache[-1]
