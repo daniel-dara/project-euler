@@ -1,5 +1,4 @@
 from __future__ import annotations
-
 from collections import Counter
 from enum import Enum
 from typing import List, Tuple

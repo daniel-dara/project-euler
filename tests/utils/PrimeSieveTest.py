@@ -1,9 +1,11 @@
-import unittest
-from utils.primesieve import PrimeSieve
+from unittest import TestCase
+
 from unittest_data_provider import data_provider
 
+from utils.primesieve import PrimeSieve
 
-class PrimeSieveTest(unittest.TestCase):
+
+class PrimeSieveTest(TestCase):
     @data_provider(lambda: (
         (-1,),
         (0,),

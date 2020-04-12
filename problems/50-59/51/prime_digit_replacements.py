@@ -1,6 +1,7 @@
 from collections import defaultdict
-from more_itertools import powerset
 from typing import Dict, List
+
+from more_itertools import powerset
 
 from utils.primesieve import PrimeSieve
 from utils.string import indices_at, unique_chars, replace_char_at_indices

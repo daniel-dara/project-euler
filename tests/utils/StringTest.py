@@ -1,11 +1,12 @@
-import unittest
 from typing import List
+from unittest import TestCase
 
 from unittest_data_provider import data_provider
+
 from utils.string import unique_chars, indices_at, replace_char_at_indices
 
 
-class StringTest(unittest.TestCase):
+class StringTest(TestCase):
     @data_provider(lambda: (
         ('', ''),
         ('a', 'a'),
