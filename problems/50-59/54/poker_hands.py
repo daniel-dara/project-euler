@@ -39,11 +39,9 @@ class Hand:
         self._type = self._get_type()
 
     def beats(self, other: Hand) -> bool:
-        # Check if one hand is outright better than the other.
         if self._type != other._type:
             return self._type.value > other._type.value
 
-        # If the hands tie then compare individual card ranks.
         for a, b in zip(self._rank_counts, other._rank_counts):
             if a != b:
                 return a > b
