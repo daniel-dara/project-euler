@@ -16,8 +16,7 @@ def find_all_sequences() -> List[Tuple[int, int, int]]:
     """Find all sequences of three numbers which are each equal distance apart, 4-digit primes, and permutations
     of each other.
     """
-    # Retrieve all 4 digit primes.
-    primes = list(filter(lambda x: x > 999, PrimeSieve(9999)))
+    primes = list(filter(lambda x: len(str(x)) == 4, PrimeSieve(9999)))
     sequences = []
 
     for first_index in range(len(primes)):
