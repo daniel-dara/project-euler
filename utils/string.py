@@ -8,7 +8,7 @@ def unique_chars(string: str) -> str:
 
 def indices_at(haystack: str, needle: str) -> List[int]:
     """Returns a list of all indices where needle is found in the haystack. Needles can overlap."""
-    # Add one to the range to properly count empty needles (since one is between each character and at both ends).
+    # Add one to the range to properly count empty needles since one is between each character and at both ends.
     return [index for index in range(len(haystack) + 1) if haystack[index:index + len(needle)] == needle]
 
 
