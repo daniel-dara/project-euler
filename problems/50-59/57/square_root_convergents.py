@@ -11,10 +11,15 @@ def solve() -> int:
 
 
 def expand(x: int) -> Tuple[int, int]:
-    previous_numerator, previous_denominator = expansions[x]
+    # Pull the expanded fraction for this iteration from cache.
+    expanded_numerator, expanded_denominator = expansions[x]
 
-    numerator = previous_denominator
-    denominator = (2 * previous_denominator) + previous_numerator
+    # Calculate "1 / (2 + expanded_fraction)
+    numerator = expanded_denominator
+    denominator = (2 * expanded_denominator) + expanded_numerator
 
+    # Cache the new expanded fraction for the next iteration.
     expansions[x + 1] = numerator, denominator
+
+    # Calculate "1 + new_fraction"
     return numerator + denominator, denominator
