@@ -10,11 +10,7 @@ I discovered Project Euler as a junior in high school when I still mostly progra
 # My Solutions
 * Problems 1 - 31 and 37 - 44 are written in C or C++.
     * 32 - 37 are solved but missing solutions.
-* Problems 45 - 46 are written in Python using my old, personal style.
-* Problems 47+ are written in Python with basic tests cases and following PEP 8.
-    * with the following deviations to PEP 8
-        * Maximum line length of 120
-        * Use of single space after sentence ending periods in paragraph comments.
+* Problems 45+ are written in Python.
 
 The `problems` directory structure is not very Python-friendly since leading numbers are not allowed in keywords. I chose readable folder names over valid package names since the goal is to make it easier to read and navigate the code.
 
