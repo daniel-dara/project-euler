@@ -15,6 +15,10 @@ class TestSolution(TestCase):
         (1, (7, 5)),
         (2, (17, 12)),
         (3, (41, 29)),
+        (4, (99, 70)),
+        (5, (239, 169)),
+        (6, (577, 408)),
+        (7, (1393, 985)),
     ))
     def test_expand(self, n: int, expected_fraction: Tuple[int, int]):
         self.assertEqual(expected_fraction, expand(n))
