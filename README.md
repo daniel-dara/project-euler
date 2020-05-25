@@ -8,8 +8,8 @@ I discovered Project Euler as a junior in high school when I still mostly progra
 <img src="http://projecteuler.net/profile/ddara.png" alt="Project Euler Stats">
 
 # My Solutions
-* Problems 1 - 31 and 37 - 44 are written in C or C++.
-    * 32 - 37 are solved but missing solutions.
+* Problems 1 - 35 and 38 - 44 are written in C or C++.
+    * 36 and 37 are solved but missing solutions.
 * Problems 45+ are written in Python.
 
 The `problems` directory structure is not very Python-friendly since leading numbers are not allowed in keywords. I chose readable folder names over valid package names since the goal is to make it easier to read and navigate the code.
